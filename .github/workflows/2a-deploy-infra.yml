@@ -1,0 +1,68 @@
+# ------------------------------------------------------------------------------------------------------------------------
+# Action: Deploy Azure Resources via Bicep Files
+# ------------------------------------------------------------------------------------------------------------------------
+name: 2a - Deploy Infrastructure
+
+on:
+  workflow_dispatch:
+    inputs:
+      deployEnvironment:
+        description: 'Environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+      parameterFile:
+        description: 'Parameter File'
+        required: true
+        default: 'main.gh.bicepparam'
+      deploymentMode:
+        description: 'Bicep Deploy Mode'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - Incremental
+          - Validation
+          - Complete
+      createResourceGroup:
+        description: Create Resource Group?
+        type: boolean
+        default: true
+      publicAccessEnabled:
+        description: Public Access Enabled?
+        type: boolean
+        default: true
+      createDnsZones:
+        description: Create DNS Zones?
+        type: boolean
+        default: true
+      addRoleAssignments:
+        description: Add Role Assignments?
+        type: boolean
+        default: true
+            
+jobs:
+  Deploy_Bicep:
+    name: Deploy ${{ inputs.deployEnvironment }} Bicep
+    uses: ./.github/workflows/template-create-infra.yml
+    secrets: inherit
+    permissions:
+      id-token: write
+      contents: read
+      actions: read
+      pages: write
+    with:
+      envCode: ${{ inputs.deployEnvironment }}
+      templatePath: './infra/bicep/'
+      templateFile: 'main.bicep'
+      parameterFile: ${{ inputs.parameterFile }}
+      parameterFileReplaceTokens: 'true'
+      deploymentMode: ${{ inputs.deploymentMode }}
+      createResourceGroup: ${{ inputs.createResourceGroup }}
+      publicAccessEnabled: ${{ inputs.publicAccessEnabled }}
+      createDnsZones: ${{ inputs.createDnsZones }}
+      addRoleAssignments: ${{ inputs.addRoleAssignments }}

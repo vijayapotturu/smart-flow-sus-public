@@ -1,0 +1,4 @@
+﻿@baseUrl=http://localhost:7112/
+
+GET {{baseUrl}}/batchstatus/8266ca79ceb14a5fa4cb064cd292027e
+Accept: application/json

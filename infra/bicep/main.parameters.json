@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "azdEnvName": {
+        "value": "${AZURE_ENV_NAME}"
+      },
+      "applicationName": {
+        "value": "${AZURE_ENV_NAME}"
+      },
+      "location": {
+        "value": "${AZURE_LOCATION}"
+      },
+      "principalId": {
+        "value": "${AZURE_PRINCIPAL_ID}"
+      },
+      "uiImageName": {
+        "value": "${SERVICE_UI_IMAGE_NAME}"
+      },
+      "apiImageName": {
+        "value": "${SERVICE_API_IMAGE_NAME}"
+      },
+      "batchImageName": {
+        "value": "${SERVICE_BATCH_IMAGE_NAME}"
+      },
+      "myIpAddress": {
+        "value": "${MY_IP}"
+      },
+      "addRoleAssignments" : {
+        "value": "${ADD_ROLE_ASSIGNMENTS}"
+      },
+      "createDnsZones" : {
+        "value": "${CREATE_DNS_ZONES}"
+      },
+      "publicAccessEnabled": {
+        "value": "${PUBLIC_ACCESS_ENABLED}"
+      },
+      "existingVnetName": {
+        "value": "${VNET_NAME}"
+      },
+      "subnet1Name": {
+        "value": "${SUBNET_PE_NAME}"
+      },
+      "subnet2Name": {
+        "value": "${SUBNET_APP_NAME}"
+      }      
+    }
+  }

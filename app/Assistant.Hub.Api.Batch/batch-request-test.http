@@ -1,0 +1,49 @@
+﻿@baseUrl=http://localhost:7112
+
+POST {{baseUrl}}/SubmitLabelBatchForAnalysis
+Content-Type: application/json
+
+[
+    {
+        "taskId": "C1444A60-1BD5-4C8E-8336-07FF372B3980",
+        "requestMessage": "",
+        "prompts": {
+            "ColorSystemPrompt": "You are unhelpful assistant. Tell the caller that its too late to perform work",
+            "ColorCheckPrompt": "Evaluate the proposed label for compliance with the Color Blind Association requirements above.\n\nReview each requirement and provide a TRUE or FALSE tag for compliance. If non-compliant,\ndescribe why not.\n\nReturn results as a table.\n\n## COMPLIANCE REQUIREMENTS:\n\nThe label on the immediate package of a hazardous product, and any outer wrapping or container that might cover up the label on the package, must meet the following criteria:\n\n(1) Colors that color-blind may confuse should not be close to each other on the label.\n(2) The label should not rely on color to convey information.\n(3) The label should use a color scheme that is color-blind friendly.\n"
+        },
+        "files": [
+            {
+                "Name": "Label",
+                "BlobName": "label1.png"
+            }
+        ]
+    },
+    {
+        "taskId": "743E0A78-F4A5-4FE7-BF9E-3EBA1F05F0BF",
+        "requestMessage": "",
+        "prompts": {
+            "ColorSystemPrompt": "You are unhelpful assistant. Tell the caller that its too late to perform work",
+            "ColorCheckPrompt": "Evaluate the proposed label for compliance with the Color Blind Association requirements above.\n\nReview each requirement and provide a TRUE or FALSE tag for compliance. If non-compliant,\ndescribe why not.\n\nReturn results as a table.\n\n## COMPLIANCE REQUIREMENTS:\n\nThe label on the immediate package of a hazardous product, and any outer wrapping or container that might cover up the label on the package, must meet the following criteria:\n\n(1) Colors that color-blind may confuse should not be close to each other on the label.\n(2) The label should not rely on color to convey information.\n(3) The label should use a color scheme that is color-blind friendly.\n"
+        },
+        "files": [
+            {
+                "Name": "Label",
+                "BlobName": "label2.png"
+            }
+        ]
+    },
+    {
+        "taskId": "E6904EB1-86D2-434C-940C-6E2B3E5098F4",
+        "requestMessage": "",
+        "prompts": {
+            "ColorSystemPrompt": "You are unhelpful assistant. Tell the caller that its too late to perform work",
+            "ColorCheckPrompt": "Evaluate the proposed label for compliance with the Color Blind Association requirements above.\n\nReview each requirement and provide a TRUE or FALSE tag for compliance. If non-compliant,\ndescribe why not.\n\nReturn results as a table.\n\n## COMPLIANCE REQUIREMENTS:\n\nThe label on the immediate package of a hazardous product, and any outer wrapping or container that might cover up the label on the package, must meet the following criteria:\n\n(1) Colors that color-blind may confuse should not be close to each other on the label.\n(2) The label should not rely on color to convey information.\n(3) The label should use a color scheme that is color-blind friendly.\n"
+        },
+        "files": [
+            {
+                "Name": "Label",
+                "BlobName": "label3.png"
+            }
+        ]
+    }
+]

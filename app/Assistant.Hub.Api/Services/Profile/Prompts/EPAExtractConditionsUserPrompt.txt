@@ -1,0 +1,8 @@
+From the {{$Topic}} section extract pertinent conditions from the below EPA registration:
+
+EPA REGISTRATION:
+
+{{$EPARegistrationRetrievalResult}}
+
+
+
