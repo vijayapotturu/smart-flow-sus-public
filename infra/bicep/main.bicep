@@ -396,15 +396,15 @@ module openAI './core/ai/cognitive-services.bicep' = {
       DeploymentCapacity: 30
     }
     chatGpt_Standard: {
-      DeploymentName: 'gpt-35-turbo'
-      ModelName: 'gpt-35-turbo'
-      ModelVersion: '0125'
+      DeploymentName: 'gpt-4o-mini'
+      ModelName: 'gpt-4o-mini'
+      ModelVersion: '2024-07-18'
       DeploymentCapacity: 10
     }
     chatGpt_Premium: {
       DeploymentName: 'gpt-4o'
       ModelName: 'gpt-4o'
-      ModelVersion: '2024-11-20'
+      ModelVersion: '2024-08-06'
       DeploymentCapacity: 10
     }
     publicNetworkAccess: publicAccessEnabled ? 'enabled' : 'disabled'
